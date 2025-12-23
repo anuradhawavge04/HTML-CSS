@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt</title>
+    <style>
+        body {
+            background-color: #bfbfbf;
+        }
+
+        .receipt-container {
+            display: block;
+            width: 80%;
+            background-color: white;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .receipt-container {
+            box-shadow: 0px 0px 10px 2px gray;
+        }
+
+        .receipt-header {
+            text-align: center;
+            border-bottom: 1px dashed #cccccc;
+        }
+
+        .receipt-header h2 {
+            color: gray;
+            font-size: 35px;
+            margin-top: 0;
+        }
+
+        .receipt-address {
+            text-align: right;
+            font-size: 15px;
+            font-weight: 700;
+            margin: 5px;
+        }
+
+        .Receipt-mobile {
+            text-align: right;
+            font-weight: 700;
+        }
+
+        .receipt-body {
+            display: block;
+            text-align: center;
+        }
+
+        .body-title {
+            text-align: center;
+            font-size: 30px;
+            margin: 40px auto;
+        }
+
+        .receipt-detail {
+            display: block;
+        }
+
+        .receipt-detail {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 20px;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        .receipt-key {
+            color: gray;
+            width: 30%;
+            margin-right: auto;
+        }
+
+        .receipt-no {
+            color: black;
+            border-bottom: 1px dashed gray;
+            width: 30%;
+            margin-left: auto;
+        }
+
+        .sign-stamp {
+            text-align: right;
+            margin-top: 30px;
+            border-bottom: 1px dashed gray;
+            margin-bottom: 30px;
+        }
+
+        .stamp-img {
+            margin-bottom: -60px;
+            transform: rotate(-20deg);
+        }
+
+        .receipt-footer {
+            background-color: #4d79ff;
+            text-align: center;
+            padding: 10px;
+            margin: px;
+        }
+
+        /*Mobile Device*/
+        @media screen and (min-width:350px) and (max-width:600px) {
+            .receipt-container {
+                display: block;
+                width: 80%;
+                margin: 5px auto;
+                padding: 5px;
+            }
+
+            .receipt-header h2 {
+                font-size: 25px;
+            }
+
+            .receipt-address {
+                font-size: 10px;
+                font-weight: 800;
+            }
+
+            .Receipt-mobile {
+                font-size: 10px;
+                font-weight: 800;
+            }
+
+            .body-title {
+                font-size: 20px;
+                margin: 40px auto;
+            }
+
+            .receipt-detail {
+                font-size: 10px;
+            }
+
+            .sign-stamp {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            .stamp-img {
+                height: 90px;
+                margin-bottom: -50px;
+            }
+
+            .receipt-footer {
+                padding: 5px;
+                margin: 5 px;
+            }
+
+            .footer-text {
+                font-size: 15px;
+            }
+
+            .signature {
+                font-size: 15px;
+            }
+
+        }
+
+        /*Normal Device*/
+
+        @media screen and (min-width: 601px) and (max-width: 769px) {
+            .receipt-container {
+                display: block;
+                width: 80%;
+                margin: 10px auto;
+                padding: 10px;
+            }
+
+            .receipt-header h2 {
+                font-size: 30px;
+            }
+
+            .receipt-address {
+                font-size: 15px;
+                font-weight: 800;
+            }
+
+            .Receipt-mobile {
+                font-size: 15px;
+                font-weight: 800;
+            }
+
+            .body-title {
+                font-size: 15px;
+                margin: 40px auto;
+            }
+
+            .receipt-detail {
+                font-size: 15px;
+            }
+
+            .sign-stamp {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            .stamp-img {
+                height: 100px;
+                margin-bottom: -50px;
+            }
+
+            .receipt-footer {
+                padding: 10px;
+                margin: 10px;
+            }
+
+            .footer-text {
+                font-size: 15px;
+            }
+
+            .signature {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (min-width: 770px) and (max-width: 992px) {
+
+            .receipt-container {
+                display: block;
+                width: 80%;
+                margin: 10px auto;
+                padding: 10px;
+            }
+
+            .receipt-header h2 {
+                font-size: 35px;
+            }
+
+            .receipt-address {
+                font-size: 20px;
+                font-weight: 800;
+            }
+
+            .Receipt-mobile {
+                font-size: 20px;
+                font-weight: 800;
+            }
+
+            .body-title {
+                font-size: 20px;
+                margin: 40px auto;
+            }
+
+            .receipt-detail {
+                font-size: 15px;
+            }
+
+            .sign-stamp {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            .stamp-img {
+                height: 100px;
+                margin-bottom: -50px;
+            }
+
+            .receipt-footer {
+                padding: 10px;
+                margin: 10px;
+            }
+
+            .footer-text {
+                font-size: 20px;
+            }
+
+            .signature {
+                font-size: 20px;
+            }
+
+        }
+
+        @media screen and (min-width: 993px) and (max-width: 1200px) {
+
+            .receipt-container {
+                display: block;
+                width: 80%;
+                margin: 10px auto;
+                padding: 10px;
+            }
+
+            .receipt-header h2 {
+                font-size: 40px;
+            }
+
+            .receipt-address {
+                font-size: 25px;
+                font-weight: 800;
+            }
+
+            .Receipt-mobile {
+                font-size: 25px;
+                font-weight: 800;
+            }
+
+            .body-title {
+                font-size: 25px;
+                margin: 40px auto;
+            }
+
+            .receipt-detail {
+                font-size: 25px;
+            }
+
+            .sign-stamp {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            .stamp-img {
+                height: 100px;
+                margin-bottom: -50px;
+            }
+
+            .receipt-footer {
+                padding: 10px;
+                margin: 10px;
+            }
+
+            .footer-text {
+                font-size: 25px;
+            }
+
+            .signature {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="receipt-container">
+        <div class="receipt-header">
+            <img src="logo.png" height="100px" alt="Flipkart-logo" />
+            <h2>Microsoft</h2>
+
+            <p class="receipt-address">
+                807,New Delhi House,<br>
+                Barakhamba Road,<br>
+                New Delhi- 110001,<br>
+                India
+            </p>
+
+            <P class="Receipt-mobile">
+                +91-1234567898
+            </P>
+        </div>
+
+        <div class="receipt-body">
+            <h3 class="body-title">
+                Payment Receipt</h3>
+        </div>
+
+
+        <div class="receipt-detail">
+            <div class="receipt-key">
+                Receipt No.
+            </div>
+            <div class="receipt-no">
+                1234323443
+            </div>
+        </div>
+
+        <div class="receipt-detail">
+            <div class="receipt-key">
+                Payment Date
+            </div>
+            <div class="receipt-no">
+                25 May 2024
+            </div>
+        </div>
+
+        <div class="receipt-detail">
+            <div class="receipt-key">
+                Amount.
+            </div>
+            <div class="receipt-no">
+                15000-/
+            </div>
+        </div>
+
+        <div class="receipt-detail">
+            <div class="receipt-key">
+                Payment Mode
+            </div>
+            <div class="receipt-no">
+                UPI
+            </div>
+        </div>
+
+        <div class="sign-stamp">
+            <img src="stamp.png" height="150px" class="stamp-img" />
+            <p class="signature">Accountant signature</p>
+        </div>
+
+        <p class="footer-text">This is a computer generated receipt and does not require any signature.</p>
+
+        <div class="receipt-footer">
+
+            <p>Thank You For Your Payment.</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

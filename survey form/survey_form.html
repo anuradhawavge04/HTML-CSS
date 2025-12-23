@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            background-color: #05c46b;
+            font-family: Verdana;
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 20px 30px 20px 30px;
+
+        }
+
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        .select{
+            text-align: left;
+            margin-bottom: 25px auto;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <h1 align="center">SURVEY FORM</h1>
+    <hr>
+    <hr>
+
+    <form id="form">
+        <div class="form-control">
+            <label for="name" id="label-name">
+                <b>Name :</b>
+            </label><br>
+            <input type="text" id="label-name" placeholder="Enter Your Name">
+        </div>
+
+        <div class="form-control">
+            <label for="surname" id="label-surname">
+                <b>Surname :</b>
+            </label><br>
+            <input type="text" id="label-surname" placeholder="Enter your surname">
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                <b>Age :</b>
+            </label><br>
+            <input type="number" id="label-age" placeholder="Enter your age">
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="label-email"></label>
+            <b>Email :</b><br>
+            <input type="email" id="label-email" placeholder="Enter your email">
+
+        </div>
+
+        <div class="select">
+            <label for="role" id="label-role">
+                <b>Which option best describes you ? </b><br>
+            </label>
+            <select name="role" id="label-role">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+
+            <div class="form-control" >
+                <label>
+                    <b>Would you like to recommend this survey form to your friend ?</b><br>
+                </label>
+
+                <label for="recommend-1">
+                    <input type="radio" id="recommend-1" name="recommend"> Yes
+                    </input>
+                </label>
+
+                <label for="recommend-2">
+                    <input type="radio" id="recommend-2" name="recommend">No
+                    </input>
+                </label>
+
+                <label for="recommend-3">
+                    <input type="radio" id="recommend-3" name="recommend"> Maybe </input>
+                </label>
+            </div>
+
+
+        </div>
+    </form>
+</body>
+
+</html>
